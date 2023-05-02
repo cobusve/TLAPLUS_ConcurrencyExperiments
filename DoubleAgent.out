@@ -1,0 +1,681 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 73 and seed -3723482814875862006 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 39512] (Mac OS X 12.6.5 aarch64, Homebrew 20 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/ejacobus/gitroot/TLAPLUS_Concurrency/DoubleAgent.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Integers.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Naturals.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/TLC.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Sequences.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module DoubleAgent
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-05-02 15:26:14)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-05-02 15:26:14.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2114:1 @!@!@
+Deadlock reached.
+@!@!@ENDMSG 2114 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <A1 line 97, col 7 to line 102, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 0
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <A2 line 104, col 7 to line 109, col 35 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 1
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <A3 line 111, col 7 to line 114, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <A1 line 97, col 7 to line 102, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 1
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <A2 line 104, col 7 to line 109, col 35 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 2
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <A3 line 111, col 7 to line 114, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <A1 line 97, col 7 to line 102, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 2
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <A2 line 104, col 7 to line 109, col 35 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 3
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <A3 line 111, col 7 to line 114, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+18: <A1 line 97, col 7 to line 102, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 3
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+19: <A2 line 104, col 7 to line 109, col 35 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 4
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+20: <A3 line 111, col 7 to line 114, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+21: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+22: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+23: <A1 line 97, col 7 to line 102, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 4
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+24: <A2 line 104, col 7 to line 109, col 35 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 5
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+25: <A3 line 111, col 7 to line 114, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+26: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+27: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+28: <A1 line 97, col 7 to line 102, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+29: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+30: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+31: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+32: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+33: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+34: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+35: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+36: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+37: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+38: <N1 line 118, col 7 to line 123, col 41 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 5
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+39: <N2 line 125, col 7 to line 128, col 53 of module DoubleAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 5
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-05-02 15:26:15
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 63, col 1 to line 63, col 4 of module DoubleAgent>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 9 to line 72, col 70 of module DoubleAgent: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<a1 line 74, col 1 to line 74, col 2 of module DoubleAgent>: 3:217
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 10 to line 74, col 35 of module DoubleAgent: 899
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 74, col 10 to line 74, col 28 of module DoubleAgent: 682
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 10 to line 75, col 26 of module DoubleAgent: 217
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 10 to line 75, col 19 of module DoubleAgent: 254
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 23 to line 75, col 26 of module DoubleAgent: 254
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 10 to line 76, col 37 of module DoubleAgent: 217
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 77, col 10 to line 77, col 52 of module DoubleAgent: 217
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 10 to line 79, col 41 of module DoubleAgent: 217
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<a2 line 81, col 1 to line 81, col 2 of module DoubleAgent>: 3:212
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 10 to line 81, col 35 of module DoubleAgent: 894
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 81, col 10 to line 81, col 28 of module DoubleAgent: 682
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 13 to line 82, col 32 of module DoubleAgent: 212
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 18 to line 83, col 41 of module DoubleAgent: 180
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 21 to line 84, col 24 of module DoubleAgent: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 21 to line 85, col 46 of module DoubleAgent: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 10 to line 86, col 52 of module DoubleAgent: 212
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 10 to line 88, col 35 of module DoubleAgent: 212
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<a3 line 90, col 1 to line 90, col 2 of module DoubleAgent>: 2:216
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 10 to line 90, col 35 of module DoubleAgent: 898
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 90, col 10 to line 90, col 28 of module DoubleAgent: 682
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 10 to line 91, col 52 of module DoubleAgent: 216
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 10 to line 93, col 53 of module DoubleAgent: 216
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A1 line 97, col 1 to line 97, col 2 of module DoubleAgent>: 20:186
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 10 to line 97, col 33 of module DoubleAgent: 868
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 97, col 10 to line 97, col 26 of module DoubleAgent: 682
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 98, col 10 to line 98, col 23 of module DoubleAgent: 186
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 98, col 10 to line 98, col 19 of module DoubleAgent: 231
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 99, col 10 to line 99, col 37 of module DoubleAgent: 186
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 100, col 10 to line 100, col 50 of module DoubleAgent: 186
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 101, col 10 to line 102, col 41 of module DoubleAgent: 186
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A2 line 104, col 1 to line 104, col 2 of module DoubleAgent>: 17:185
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 104, col 10 to line 104, col 33 of module DoubleAgent: 861
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 104, col 10 to line 104, col 26 of module DoubleAgent: 676
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 105, col 10 to line 105, col 32 of module DoubleAgent: 185
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 105, col 10 to line 105, col 25 of module DoubleAgent: 232
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 105, col 29 to line 105, col 32 of module DoubleAgent: 232
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 106, col 10 to line 106, col 49 of module DoubleAgent: 185
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 107, col 10 to line 107, col 50 of module DoubleAgent: 185
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 108, col 10 to line 109, col 35 of module DoubleAgent: 185
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A3 line 111, col 1 to line 111, col 2 of module DoubleAgent>: 21:219
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 111, col 10 to line 111, col 33 of module DoubleAgent: 890
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 111, col 10 to line 111, col 26 of module DoubleAgent: 671
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 112, col 10 to line 112, col 50 of module DoubleAgent: 219
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 113, col 10 to line 114, col 53 of module DoubleAgent: 219
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<N1 line 118, col 1 to line 118, col 2 of module DoubleAgent>: 268:279
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 118, col 10 to line 118, col 31 of module DoubleAgent: 945
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 118, col 10 to line 118, col 24 of module DoubleAgent: 666
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 119, col 10 to line 119, col 26 of module DoubleAgent: 279
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 119, col 10 to line 119, col 19 of module DoubleAgent: 333
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 119, col 23 to line 119, col 26 of module DoubleAgent: 333
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 120, col 10 to line 120, col 37 of module DoubleAgent: 279
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 121, col 10 to line 121, col 48 of module DoubleAgent: 279
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 10 to line 123, col 41 of module DoubleAgent: 279
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<N2 line 125, col 1 to line 125, col 2 of module DoubleAgent>: 309:333
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 125, col 10 to line 125, col 31 of module DoubleAgent: 988
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 125, col 10 to line 125, col 24 of module DoubleAgent: 655
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 126, col 10 to line 126, col 48 of module DoubleAgent: 333
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 127, col 10 to line 128, col 53 of module DoubleAgent: 333
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 133, col 1 to line 133, col 11 of module DoubleAgent>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 133, col 19 to line 133, col 56 of module DoubleAgent: 644
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 134, col 19 to line 134, col 32 of module DoubleAgent: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(39) at 2023-05-02 15:26:15: 1,773 states generated (115,504 s/min), 644 distinct states found (41,954 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+1773 states generated, 644 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 39.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 3 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 926ms at (2023-05-02 15:26:15)
+@!@!@ENDMSG 2186 @!@!@

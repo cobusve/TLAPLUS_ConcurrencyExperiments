@@ -1,0 +1,960 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 75 and seed -7134830064109838993 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 29014] (Mac OS X 12.6.5 aarch64, Homebrew 20 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/ejacobus/gitroot/TLAPLUS_Concurrency/DeadlockAgent.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Integers.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Naturals.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/TLC.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Sequences.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module DeadlockAgent
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-05-02 11:43:36)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-05-02 11:43:36.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2114:1 @!@!@
+Deadlock reached.
+@!@!@ENDMSG 2114 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 0
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <a1 line 79, col 7 to line 84, col 54 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a2", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 1
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <a2 line 86, col 7 to line 93, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a3", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 1
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <a3 line 95, col 7 to line 98, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 1
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <a1 line 79, col 7 to line 84, col 54 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a2", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 2
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <a2 line 86, col 7 to line 93, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a3", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 2
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <a3 line 95, col 7 to line 98, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 2
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <a1 line 79, col 7 to line 84, col 54 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a2", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 3
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <a2 line 86, col 7 to line 93, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a3", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 3
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <a3 line 95, col 7 to line 98, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 3
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <a1 line 79, col 7 to line 84, col 54 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a2", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <a2 line 86, col 7 to line 93, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a3", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <a3 line 95, col 7 to line 98, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 0
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <A1 line 102, col 7 to line 111, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 0
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <A2 line 113, col 7 to line 118, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 1
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <A3 line 120, col 7 to line 124, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A4"]
+/\ applicationQueue = 1
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+18: <A4 line 126, col 7 to line 129, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+19: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+20: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+21: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 1
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+22: <A1 line 102, col 7 to line 111, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 1
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+23: <A2 line 113, col 7 to line 118, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 2
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+24: <A3 line 120, col 7 to line 124, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A4"]
+/\ applicationQueue = 2
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+25: <A4 line 126, col 7 to line 129, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+26: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+27: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+28: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 2
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+29: <A1 line 102, col 7 to line 111, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 2
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+30: <A2 line 113, col 7 to line 118, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 3
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+31: <A3 line 120, col 7 to line 124, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A4"]
+/\ applicationQueue = 3
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+32: <A4 line 126, col 7 to line 129, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+33: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+34: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+35: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 3
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+36: <A1 line 102, col 7 to line 111, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 3
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+37: <A2 line 113, col 7 to line 118, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 4
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+38: <A3 line 120, col 7 to line 124, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A4"]
+/\ applicationQueue = 4
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+39: <A4 line 126, col 7 to line 129, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+40: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+41: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+42: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 4
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+43: <A1 line 102, col 7 to line 111, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 4
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+44: <A2 line 113, col 7 to line 118, col 48 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A3"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+45: <A3 line 120, col 7 to line 124, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A4"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+46: <A4 line 126, col 7 to line 129, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+47: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+48: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+49: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A1"]
+/\ applicationQueue = 5
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+50: <A1 line 102, col 7 to line 111, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+51: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+52: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 4
+/\ packetCount = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+53: <N1 line 133, col 7 to line 139, col 41 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N2", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+54: <N2 line 141, col 7 to line 145, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N3", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+55: <N3 line 147, col 7 to line 150, col 66 of module DeadlockAgent>
+/\ NetworkTask = "Network"
+/\ ApplicationTask = "Application"
+/\ MQTTAgentTask = "MQTTAgent"
+/\ QMax = 5
+/\ pc = [Network |-> "N1", Application |-> "a1", MQTTAgent |-> "A2"]
+/\ applicationQueue = 5
+/\ agentQueue = 5
+/\ packetCount = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-05-02 11:43:37
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 67, col 1 to line 67, col 4 of module DeadlockAgent>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 9 to line 77, col 70 of module DeadlockAgent: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<a1 line 79, col 1 to line 79, col 2 of module DeadlockAgent>: 17:1118
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 10 to line 79, col 35 of module DeadlockAgent: 5674
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 79, col 10 to line 79, col 28 of module DeadlockAgent: 4556
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 10 to line 80, col 26 of module DeadlockAgent: 1118
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 80, col 10 to line 80, col 19 of module DeadlockAgent: 1545
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 80, col 23 to line 80, col 26 of module DeadlockAgent: 1545
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 10 to line 81, col 37 of module DeadlockAgent: 1118
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 10 to line 82, col 52 of module DeadlockAgent: 1118
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 10 to line 84, col 54 of module DeadlockAgent: 1118
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<a2 line 86, col 1 to line 86, col 2 of module DeadlockAgent>: 17:1510
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 10 to line 86, col 35 of module DeadlockAgent: 6062
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 86, col 10 to line 86, col 28 of module DeadlockAgent: 4552
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 13 to line 87, col 32 of module DeadlockAgent: 1510
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 18 to line 88, col 60 of module DeadlockAgent: 1254
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 21 to line 89, col 24 of module DeadlockAgent: 256
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 21 to line 90, col 46 of module DeadlockAgent: 256
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 10 to line 91, col 52 of module DeadlockAgent: 1510
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 10 to line 93, col 48 of module DeadlockAgent: 1510
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<a3 line 95, col 1 to line 95, col 2 of module DeadlockAgent>: 17:1501
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 95, col 10 to line 95, col 35 of module DeadlockAgent: 6049
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 10 to line 95, col 28 of module DeadlockAgent: 4548
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 10 to line 96, col 52 of module DeadlockAgent: 1501
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 10 to line 98, col 66 of module DeadlockAgent: 1501
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A1 line 102, col 1 to line 102, col 2 of module DeadlockAgent>: 106:1094
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 102, col 10 to line 102, col 33 of module DeadlockAgent: 5638
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 102, col 10 to line 102, col 26 of module DeadlockAgent: 4544
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 103, col 10 to line 103, col 23 of module DeadlockAgent: 1094
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 103, col 10 to line 103, col 19 of module DeadlockAgent: 1148
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 104, col 10 to line 104, col 37 of module DeadlockAgent: 1094
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 105, col 13 to line 105, col 27 of module DeadlockAgent: 1094
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 106, col 18 to line 107, col 61 of module DeadlockAgent: 813
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 108, col 21 to line 108, col 61 of module DeadlockAgent: 281
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 109, col 21 to line 109, col 41 of module DeadlockAgent: 281
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 110, col 10 to line 111, col 41 of module DeadlockAgent: 1094
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A2 line 113, col 1 to line 113, col 2 of module DeadlockAgent>: 90:950
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 113, col 10 to line 113, col 33 of module DeadlockAgent: 5488
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 113, col 10 to line 113, col 26 of module DeadlockAgent: 4538
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 114, col 10 to line 114, col 32 of module DeadlockAgent: 950
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 114, col 10 to line 114, col 25 of module DeadlockAgent: 1123
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 114, col 29 to line 114, col 32 of module DeadlockAgent: 1123
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 115, col 10 to line 115, col 49 of module DeadlockAgent: 950
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 116, col 10 to line 116, col 50 of module DeadlockAgent: 950
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 117, col 10 to line 118, col 48 of module DeadlockAgent: 950
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A3 line 120, col 1 to line 120, col 2 of module DeadlockAgent>: 126:1138
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 120, col 10 to line 120, col 33 of module DeadlockAgent: 5671
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 120, col 10 to line 120, col 26 of module DeadlockAgent: 4533
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 121, col 10 to line 121, col 13 of module DeadlockAgent: 1138
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 10 to line 122, col 50 of module DeadlockAgent: 1138
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 123, col 10 to line 124, col 66 of module DeadlockAgent: 1138
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A4 line 126, col 1 to line 126, col 2 of module DeadlockAgent>: 110:1135
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 126, col 10 to line 126, col 33 of module DeadlockAgent: 5663
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 126, col 10 to line 126, col 26 of module DeadlockAgent: 4528
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 127, col 10 to line 127, col 50 of module DeadlockAgent: 1135
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 128, col 10 to line 129, col 66 of module DeadlockAgent: 1135
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<N1 line 133, col 1 to line 133, col 2 of module DeadlockAgent>: 1078:1085
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 133, col 10 to line 133, col 31 of module DeadlockAgent: 5608
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 133, col 10 to line 133, col 24 of module DeadlockAgent: 4523
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 134, col 10 to line 134, col 26 of module DeadlockAgent: 1085
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 134, col 10 to line 134, col 19 of module DeadlockAgent: 1501
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 134, col 23 to line 134, col 26 of module DeadlockAgent: 1501
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 135, col 10 to line 135, col 37 of module DeadlockAgent: 1085
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 136, col 10 to line 136, col 39 of module DeadlockAgent: 1085
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 137, col 10 to line 137, col 48 of module DeadlockAgent: 1085
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 138, col 10 to line 139, col 41 of module DeadlockAgent: 1085
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<N2 line 141, col 1 to line 141, col 2 of module DeadlockAgent>: 1506:1513
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 141, col 10 to line 141, col 31 of module DeadlockAgent: 6029
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 141, col 10 to line 141, col 24 of module DeadlockAgent: 4516
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 142, col 10 to line 142, col 13 of module DeadlockAgent: 1513
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 143, col 10 to line 143, col 48 of module DeadlockAgent: 1513
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 144, col 10 to line 145, col 66 of module DeadlockAgent: 1513
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<N3 line 147, col 1 to line 147, col 2 of module DeadlockAgent>: 1448:1509
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 147, col 10 to line 147, col 31 of module DeadlockAgent: 6018
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 147, col 10 to line 147, col 24 of module DeadlockAgent: 4509
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 148, col 10 to line 148, col 48 of module DeadlockAgent: 1509
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 149, col 10 to line 150, col 66 of module DeadlockAgent: 1509
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 155, col 1 to line 155, col 11 of module DeadlockAgent>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 155, col 19 to line 155, col 56 of module DeadlockAgent: 4502
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 156, col 19 to line 156, col 32 of module DeadlockAgent: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(56) at 2023-05-02 11:43:37: 12,450 states generated (1,247,078 s/min), 4,516 distinct states found (452,353 ds/min), 14 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+12450 states generated, 4516 distinct states found, 14 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 56.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 3 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 713ms at (2023-05-02 11:43:37)
+@!@!@ENDMSG 2186 @!@!@

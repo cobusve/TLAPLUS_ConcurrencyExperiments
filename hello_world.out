@@ -1,0 +1,219 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 46 and seed -6952608980097010821 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 56654] (Mac OS X 12.6.5 aarch64, Homebrew 20 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/ejacobus/gitroot/TLAPLUS_Concurrency/hello_world.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Integers.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Naturals.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/TLC.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Sequences.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module hello_world
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-05-01 16:53:27)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-05-01 16:53:27.
+@!@!@ENDMSG 2190 @!@!@
+1
+2
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant Stopper is violated.
+@!@!@ENDMSG 2110 @!@!@
+1
+2
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ a = 0
+/\ pc = [Task1 |-> "a1"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 1
+/\ pc = [Task1 |-> "a2"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 1
+/\ pc = [Task1 |-> "a3"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 1
+/\ pc = [Task1 |-> "a1"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 2
+/\ pc = [Task1 |-> "a2"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 2
+/\ pc = [Task1 |-> "a3"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 2
+/\ pc = [Task1 |-> "a1"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <Next line 57, col 10 to line 57, col 41 of module hello_world>
+/\ a = 3
+/\ pc = [Task1 |-> "a2"]
+/\ TaskList = {"Task1"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-05-01 16:53:27
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 30, col 1 to line 30, col 4 of module hello_world>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 9 to line 33, col 43 of module hello_world: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 54, col 1 to line 54, col 11 of module hello_world>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 19 to line 54, col 56 of module hello_world: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 19 to line 55, col 32 of module hello_world: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Next line 57, col 1 to line 57, col 4 of module hello_world (57 10 57 41)>: 7:14
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 16 to line 35, col 30 of module hello_world: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 35, col 16 to line 35, col 23 of module hello_world: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 19 to line 36, col 23 of module hello_world: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 27 to line 37, col 32 of module hello_world: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 27 to line 38, col 36 of module hello_world: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 32 to line 38, col 36 of module hello_world: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 16 to line 39, col 47 of module hello_world: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 39, col 22 to line 39, col 47 of module hello_world: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 16 to line 40, col 33 of module hello_world: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 18 to line 51, col 21 of module hello_world: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 16 to line 42, col 30 of module hello_world: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 42, col 16 to line 42, col 23 of module hello_world: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 16 to line 43, col 24 of module hello_world: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 44, col 16 to line 44, col 47 of module hello_world: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 16 to line 45, col 42 of module hello_world: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 30 to line 51, col 33 of module hello_world: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 16 to line 47, col 30 of module hello_world: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 47, col 16 to line 47, col 23 of module hello_world: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 16 to line 48, col 47 of module hello_world: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 16 to line 49, col 42 of module hello_world: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 42 to line 51, col 45 of module hello_world: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 37 to line 57, col 40 of module hello_world: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 22 to line 57, col 29 of module hello_world: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<Stopper line 67, col 1 to line 67, col 7 of module hello_world>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 12 to line 68, col 20 of module hello_world: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 15 to line 67, col 20 of module hello_world: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 15 to line 68, col 20 of module hello_world: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2023-05-01 16:53:27: 8 states generated (774 s/min), 8 distinct states found (774 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+8 states generated, 8 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 8.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 1, the maximum 1 and the 95th percentile is 1).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 629ms at (2023-05-01 16:53:27)
+@!@!@ENDMSG 2186 @!@!@

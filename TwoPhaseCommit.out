@@ -1,0 +1,34 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 4 and seed 7317522316566752074 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94042] (Mac OS X 12.6.5 aarch64, Homebrew 20 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/ejacobus/gitroot/TLAPLUS_Concurrency/TwoPhaseCommit.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Naturals.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/TLC.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/Sequences.tla
+Parsing file /private/var/folders/nr/04wbhk494k13_g4yg318vhtw0000gr/T/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TwoPhaseCommit
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-04-29 21:30:43)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-04-29 21:30:43.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(29238) at 2023-04-29 21:30:46: 2,338,774 states generated (2,338,774 s/min), 467,774 distinct states found (467,774 ds/min), 19 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
